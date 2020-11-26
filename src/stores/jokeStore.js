@@ -22,9 +22,12 @@ class JokeStore {
 
   likeJoke = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/jokes/like", {
-        text: this.joke,
-      });
+      const response = await axios.post(
+        "http://thawing-harbor-03372.herokuapp.com/jokes/like",
+        {
+          text: this.joke,
+        }
+      );
       console.log(
         "🚀 ~ file: jokeStore.js ~ line 29 ~ JokeStore ~ likeJoke= ~ response",
         response

@@ -19,6 +19,24 @@ class JokeStore {
       );
     }
   };
+
+  likeJoke = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/jokes/like",
+        this.joke
+      );
+      console.log(
+        "🚀 ~ file: jokeStore.js ~ line 29 ~ JokeStore ~ likeJoke= ~ response",
+        response
+      );
+    } catch (error) {
+      console.error(
+        "🚀 ~ file: jokeStore.js ~ line 28 ~ JokeStore ~ likeJoke= ~ error",
+        error
+      );
+    }
+  };
 }
 
 const jokeStore = new JokeStore();
